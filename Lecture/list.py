@@ -72,3 +72,4 @@ a = ["Life", "is", "too", "short"]
 a = str(a)
 print(a)
 print(type(a))
+
