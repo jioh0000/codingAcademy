@@ -16,6 +16,7 @@ for i in range(3,a+1):
 """
 
 #3/11
+"""
 a = 0
 b = 5
 for i in range(0,11):
@@ -26,4 +27,15 @@ for i in range(0,11):
     if i>4: 
         a+=4
         b+=2
+    print()
+"""
+
+#3/12
+"""
+
+"""
+a=0
+for i in range(0,4):
+    for j in range(0,4):
+        print(j+i,end=" ")
     print()
