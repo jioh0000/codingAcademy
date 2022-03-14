@@ -60,6 +60,7 @@ del ls[4]
 print(ls)
 
 #pop
+print("pop")
 a = ls.pop(-1)
 print(a)
 
