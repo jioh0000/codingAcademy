@@ -16,3 +16,7 @@ print(type(a), type(b))
 a = [1,2,3,4]
 while a: #while True
     print(a.pop())
+
+secret = "sfsfwefdsf"
+
+print(bool(secret))
