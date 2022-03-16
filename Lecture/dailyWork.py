@@ -41,8 +41,6 @@ for i in range(0,4):
 
 #3/13
 """
-
-"""
 low_prices = [100,200,400,800,1000]
 high_prices = [150,300,430,880,1000]
 volatility = []
@@ -52,3 +50,25 @@ for i in range(0,len(low_prices)):
 
 for i in range(0,5):
     print(volatility[i], end=" ")
+"""
+
+#3/16
+Days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+a, b = map(int,input().split())
+day = 0
+
+for x in range(0,a-1):
+    day+=Days[x]
+
+day+=b 
+
+if day%7==1: print("MON")
+elif day%7==2: print("TUE")
+elif day%7==3: print("WED")
+elif day%7==4: print("THU")
+elif day%7==5: print("FRI")
+elif day%7==6: print("SAT")
+elif day%7==0: print("SUN")
+
+
