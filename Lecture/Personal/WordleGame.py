@@ -8,6 +8,11 @@ def Search(answer, word):
         else:
             print(word[i] + ": Does not Exist")
 
-
+print("<RULE>")
+print("[] = A letter insdie is in the answer at same index")
+print("() = A letter insdie is in the answer at different index")
+print("-----------------------")
+print("Game Start")
+print("-----------------------")
 answer = "MARCH"
 Search(answer, "APRIL")
