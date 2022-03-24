@@ -1,12 +1,21 @@
-def Search(answer, word):
-    for i in range(0,5):
-        if word[i] in answer: 
-            if word.find(word[i]) == answer.find(word[i]):
-                print(word[i] + ": Exsist at Same Index")
+
+def Search(answer, userInput):
+    output = ""
+    index = 0
+    for char in userInput:
+        if char in answer: 
+            if index == int(answer.find(char)):
+                output += f"[{char}] "
             else:
-                print(word[i] + ": Exist at Different Index")
+                output += f"({char}) "
         else:
-            print(word[i] + ": Does not Exist")
+            output += f"{char} "
+    index+=1
+    print(output)
+
+
+
+answer = "MARCH"
 
 print("<RULE>")
 print("[] = A letter insdie is in the answer at same index")
@@ -14,5 +23,10 @@ print("() = A letter insdie is in the answer at different index")
 print("-----------------------")
 print("Game Start")
 print("-----------------------")
-answer = "MARCH"
-Search(answer, "APRIL")
+for chance in range(0,6):
+    print("Five Letter Word: ", end="")
+    userInput = input().upper()
+    Search(answer, userInput)
+    
+
+
