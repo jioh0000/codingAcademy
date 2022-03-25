@@ -1,21 +1,23 @@
+import random
+random.random()
 
 def Search(answer, userInput):
     output = ""
-    index = 0
     for char in userInput:
         if char in answer: 
-            if index == int(answer.find(char)):
+            if userInput.find(char) == answer.find(char):
                 output += f"[{char}] "
             else:
                 output += f"({char}) "
         else:
             output += f"{char} "
-    index+=1
+    
     print(output)
 
 
 
-answer = "MARCH"
+wordList = ["THEIR, MARCH"]
+answer = wordList[random.randrange(0,2)]
 
 print("<RULE>")
 print("[] = A letter insdie is in the answer at same index")
