@@ -3,21 +3,21 @@ random.random()
 
 def Search(answer, userInput):
     output = ""
-    for char in userInput:
-        if char in answer: 
-            if userInput.find(char) == answer.find(char):
-                output += f"[{char}] "
-            else:
-                output += f"({char}) "
+    
+    for i in range(0,5):
+        if userInput[i] == answer[i]:
+            output += f"[{userInput[i]}] "
+        elif userInput[i] in answer:
+            output += f"({userInput[i]}) "
         else:
-            output += f"{char} "
+            output += f"{userInput[i]} "
     
     print(output)
 
 
 
-wordList = ["THEIR, MARCH"]
-answer = wordList[random.randrange(0,2)]
+wordList = ["THEIR"]
+answer = random.choice(wordList)
 
 print("<RULE>")
 print("[] = A letter insdie is in the answer at same index")
