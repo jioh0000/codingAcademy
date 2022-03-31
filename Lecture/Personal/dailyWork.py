@@ -53,6 +53,7 @@ for i in range(0,5):
 """
 
 #3/16
+"""
 Days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 a, b = map(int,input().split())
@@ -70,5 +71,17 @@ elif day%7==4: print("THU")
 elif day%7==5: print("FRI")
 elif day%7==6: print("SAT")
 elif day%7==0: print("SUN")
+"""
 
+#3/28
+#https://programmers.co.kr/learn/courses/30/lessons/12906?language=python3
+def solution(arr):
+    answer = []
+    store = 10
+    for a in arr:
+        if a != store:
+            answer.append(a)
+        store = a
+    
+    return answer
 
