@@ -1,3 +1,5 @@
+
+"""
 import random
 random.random()
 
@@ -29,6 +31,21 @@ for chance in range(0,6):
     print("Five Letter Word: ", end="")
     userInput = input().upper()
     Search(answer, userInput)
-    
+"""
 
+list = [['[ ]','[ ]','[ ]'],['[ ]','[ ]','[ ]'],['[ ]','[ ]','[ ]']]
+coordinate = []
+
+for i in range(0,3):
+    for j in list[i]:
+        print(j, end="")
+    print()
+
+
+while True:
+    print("Enter a coordinate: ")
+    coordinate = input().split(",")
+    print(coordinate[0])
+    print(coordinate[1])
+    break
 
