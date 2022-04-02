@@ -75,6 +75,7 @@ elif day%7==0: print("SUN")
 
 #3/28
 #https://programmers.co.kr/learn/courses/30/lessons/12906?language=python3
+"""
 def solution(arr):
     answer = []
     store = 10
@@ -84,4 +85,18 @@ def solution(arr):
         store = a
     
     return answer
+"""
 
+#4/2
+#https://programmers.co.kr/learn/courses/30/lessons/12912
+
+def solution(a, b):
+    answer = 0
+    
+    if a<=b:
+        for i in range(a,b+1):
+            answer+=i
+    else:
+        for i in range(a,b-1,-1):
+            answer+=i
+    return answer
