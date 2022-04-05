@@ -2,10 +2,10 @@ from sympy import false
 
 def check_result(player_position, current_player):
 
-    solution = [[1,2,3], [4,5,6], [7,8,9], [1,5,9], 
+    winningGridPosition = [[1,2,3], [4,5,6], [7,8,9], [1,5,9], 
                 [3,5,7], [1,4,7], [2,5,8], [3,6,9]] #Cases in which determine a winner
 
-    for i in solution:
+    for i in winningGridPosition:
         if all(y in player_position[current_player] for y in i):
             # If any winning combi satisfies, return win
             return 'Win'
