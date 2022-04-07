@@ -33,13 +33,6 @@ for chance in range(0,6):
     Search(answer, userInput)
 """
 
-list = [['[ ]','[ ]','[ ]'],['[ ]','[ ]','[ ]'],['[ ]','[ ]','[ ]']]
-coordinate = []
-
-for i in range(0,3):
-    for j in list[i]:
-        print(j, end="")
-    print()
 
 
 while True:
