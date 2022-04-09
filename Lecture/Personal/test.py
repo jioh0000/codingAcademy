@@ -17,7 +17,6 @@ def check_result(player_position, current_player):
 player1 = 'X'
 player2 = 'O'
 current_player = player1
-player_choice = {'X': '', 'O': ''}
 
 while True:
 
@@ -25,13 +24,16 @@ while True:
 
     #Stores the positions of X and O
     player_position = {'X':[], 'O':[]}
+    
     while True:
+        #Output (Grid)
         print("\n")
-        print(f"\t [{inputlist[0]}] | [{inputlist[1]}] | [{inputlist[2]}]\n")
+        print(f"\t [{inputlist[0]}] | [{inputlist[1]}] | [{inputlist[2]}]\n") 
         print(f"\t [{inputlist[3]}] | [{inputlist[4]}] | [{inputlist[5]}]\n")
         print(f"\t [{inputlist[6]}] | [{inputlist[7]}] | [{inputlist[8]}]\n")
     
         print(current_player, "--> Select a grid!:", end=" ")
+        #Input (GridNum)
         userSelectGrid = int(input())
         
         if inputlist[userSelectGrid - 1] != ' ':
@@ -39,10 +41,13 @@ while True:
             continue
         
         inputlist[userSelectGrid - 1] = current_player
+
+
         player_position[current_player].append(userSelectGrid)
 
         #Function call for check win
         if check_result(player_position, current_player) == 'Win':
+            #Output (Grid)
             print("\n")
             print(f"\t [{inputlist[0]}] | [{inputlist[1]}] | [{inputlist[2]}]\n")
             print(f"\t [{inputlist[3]}] | [{inputlist[4]}] | [{inputlist[5]}]\n")
@@ -51,6 +56,7 @@ while True:
             break
         #Function call for check draw
         if check_result(player_position, current_player) == "Draw":
+            #Output (Grid)
             print("\n")
             print(f"\t [{inputlist[0]}] | [{inputlist[1]}] | [{inputlist[2]}]\n")
             print(f"\t [{inputlist[3]}] | [{inputlist[4]}] | [{inputlist[5]}]\n")
