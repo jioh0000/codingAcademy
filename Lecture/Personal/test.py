@@ -1,14 +1,14 @@
-def check_result(player_position, current_player):
+def check_result(player_choice, current_player):
 
     winningGridPosition = [[7,8,9],[4,5,6],[1,2,3],[1,5,9], 
                 [3,5,7],[1,4,7],[2,5,8],[3,6,9]] #Cases in which determine a winner
 
     for i in winningGridPosition:
-        if all(j in player_position[current_player] for j in i):
+        if all(j in player_choice[current_player] for j in i):
             # If any winning combi satisfies, return win
             return 'Win'
 
-    if len(player_position['X']) + len(player_position['O']) == 9:
+    if len(player_choice['X']) + len(player_choice['O']) == 9:
         return 'Draw'
 
     return False
@@ -23,7 +23,7 @@ while True:
     inputlist = [' ',' ',' ',' ',' ',' ',' ',' ',' ']
 
     #Stores the positions of X and O
-    player_position = {'X':[], 'O':[]}
+    player_choice = {'X':[], 'O':[]}
     
     while True:
         #Output (Grid)
@@ -43,10 +43,10 @@ while True:
         inputlist[userSelectGrid - 1] = current_player
 
 
-        player_position[current_player].append(userSelectGrid)
+        player_choice[current_player].append(userSelectGrid)
 
         #Function call for check win
-        if check_result(player_position, current_player) == 'Win':
+        if check_result(player_choice, current_player) == 'Win':
             #Output (Grid)
             print("\n")
             print(f"\t [{inputlist[0]}] | [{inputlist[1]}] | [{inputlist[2]}]\n")
@@ -55,7 +55,7 @@ while True:
             print('winner is ',current_player,'\n')
             break
         #Function call for check draw
-        if check_result(player_position, current_player) == "Draw":
+        if check_result(player_choice, current_player) == "Draw":
             #Output (Grid)
             print("\n")
             print(f"\t [{inputlist[0]}] | [{inputlist[1]}] | [{inputlist[2]}]\n")
