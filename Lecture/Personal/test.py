@@ -23,6 +23,7 @@ while True:
     inputlist = [' ',' ',' ',' ',' ',' ',' ',' ',' ']
 
     #Stores the positions of X and O
+
     player_choice = {'X':[], 'O':[]}
     
     while True:
@@ -44,6 +45,7 @@ while True:
 
 
         player_choice[current_player].append(userSelectGrid)
+
 
         #Function call for check win
         if check_result(player_choice, current_player) == 'Win':
