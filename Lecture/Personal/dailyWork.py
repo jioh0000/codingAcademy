@@ -89,7 +89,7 @@ def solution(arr):
 
 #4/2
 #https://programmers.co.kr/learn/courses/30/lessons/12912
-
+'''
 def solution(a, b):
     answer = 0
     
@@ -99,4 +99,40 @@ def solution(a, b):
     else:
         for i in range(a,b-1,-1):
             answer+=i
+    return answer
+'''
+
+#5/15
+# https://programmers.co.kr/learn/courses/30/lessons/72410?language=python3
+
+def solution(new_id):
+    answer = ''
+    answer = new_id.lower()
+    previous = '.'
+    
+    for letter in answer:
+        if not(letter.isalpha()) and not(letter.isdigit()) and not(letter=='-') and not(letter=='_') and not(letter=='.'):
+            answer = answer.replace(letter,"")
+            
+    for letter in answer:
+        try:
+            if previous=='.' and letter=='.': 
+                x = answer.index('.')
+                answer = answer[:x] + answer[x+1:]
+            previous = letter
+        except:
+            print(answer)
+            pass
+    try:
+        if answer[0]=='.': answer = answer[1:]
+        if answer == '': answer = 'a'
+
+        if len(answer) > 15:
+            answer = answer[:15]
+            if answer[-1]=='.': answer = answer[:-1]
+        if len(answer) < 3:
+            while(len(answer)!=3): answer += answer[-1]
+    except:
+        pass
+    
     return answer
