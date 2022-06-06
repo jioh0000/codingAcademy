@@ -104,7 +104,7 @@ def solution(a, b):
 
 #5/15
 # https://programmers.co.kr/learn/courses/30/lessons/72410?language=python3
-
+"""
 def solution(new_id):
     answer = ''
     answer = new_id.lower()
@@ -136,3 +136,33 @@ def solution(new_id):
         pass
     
     return answer
+"""
+
+def solution(answers):
+    answer = []
+    count1, count2, count3 = 0,0,0
+    num1 = [1,2,3,4,5]
+    num2 = [2,1,2,3,2,4,2,5]
+    num3 = [3,3,1,1,2,2,4,4,5,5]
+    
+    for x in range(0,len(answers)):
+        if answers[x] == num1[x%5]:
+            count1 += 1
+        if answers[x] == num2[x%8]:
+            count2 += 1
+        if answers[x] == num3[x%10]:
+            count3 += 1
+            
+    if count1 > count2:
+        if count1 > count3: answer.append('1')
+        else: answer.append('3')
+    else:
+        if count2 > count3: answer.append('2')
+        else: answer.append('3')
+    
+    return answer
+
+answers = [1,2,3,4,5]
+
+solution(answers)
+
