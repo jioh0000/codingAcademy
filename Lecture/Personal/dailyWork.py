@@ -138,6 +138,7 @@ def solution(new_id):
     return answer
 """
 
+"""
 def solution(answers):
     answer = []
     count1, count2, count3 = 0,0,0
@@ -165,4 +166,18 @@ def solution(answers):
 answers = [1,2,3,4,5]
 
 solution(answers)
+"""
 
+def solution(left, right):
+    answer = 0
+    for x in range(left,right+1):
+        count = 0
+        for i in range(1,x+1):
+            if x%i == 0:
+                count += 1
+        if count%2 == 0:
+            answer += x
+        else:
+            answer -= x
+    
+    return answer
