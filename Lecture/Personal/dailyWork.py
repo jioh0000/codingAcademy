@@ -168,6 +168,7 @@ answers = [1,2,3,4,5]
 solution(answers)
 """
 
+"""
 def solution(left, right):
     answer = 0
     for x in range(left,right+1):
@@ -181,3 +182,20 @@ def solution(left, right):
             answer -= x
     
     return answer
+"""
+
+# 6/24
+
+sum = 0
+temp = 0
+a = int(input())
+b = map(int, input().split())
+
+b = list(b)
+b.sort()
+
+for i in b:
+    sum += (temp + i)
+    temp += i
+
+print(sum)
