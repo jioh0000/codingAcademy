@@ -186,6 +186,7 @@ def solution(left, right):
 
 # 6/24
 
+"""
 sum = 0
 temp = 0
 a = int(input())
@@ -199,3 +200,4 @@ for i in b:
     temp += i
 
 print(sum)
+"""
